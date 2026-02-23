@@ -9,9 +9,12 @@ locals {
     data.aws_region.default.name == "us-east-1" ? "compute-1" : format("%s.compute", data.aws_region.default.name)
   ) : null
   user_data_templated = templatefile("${path.module}/${var.user_data_template}", {
-    user_data   = join("\n", var.user_data)
-    ssm_enabled = var.ssm_enabled
-    ssh_user    = var.ssh_user
+    user_data         = join("\n", var.user_data)
+    ssm_enabled       = var.ssm_enabled
+    ssh_user          = var.ssh_user
+    tcp_forwarding    = var.tcp_forwarding
+    x11_forwarding    = var.x11_forwarding
+    cloudwatch_group  = module.bastion_logs.log_group_name
   })
 }
 

@@ -4,6 +4,9 @@
 **/*.terraform.tfstate*
 **/.terraform.lock.hcl
 
+# macOS
+.DS_Store
+
 # Module directory
 .idea
 *.iml
