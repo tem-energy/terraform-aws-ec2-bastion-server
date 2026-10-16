@@ -4,8 +4,4 @@
 # Order is important: the last matching pattern has the highest precedence
 
 # These owners will be the default owners for everything
-* @tem-energy/back-devs
-
-# tem. admins must review all changes to GitHub config, specifically CODEOWNERS
-.github/* @tem-energy/admins
-.github/CODEOWNERS @tem-energy/admins
+* @tem-energy/platform
